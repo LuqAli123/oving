@@ -34,4 +34,10 @@ function sendForm(){
     street: $("#street").val()
     };
     console.log(citizen)
+    if (validerFirstname() && validerSurname() && validerDoB && validerSSN &&
+    validatePhone() && valideteEpost() && validerCity() && validerStreet){
+        $.post("/saveCitizen",citizen,function (){
+
+        });
+    }
 }
